@@ -11,13 +11,21 @@ public class Filter {
 
     public Map<String, List> filtBy(ArrayList<String> arrayList){
 
-
-        if (arrayList.get(0)!="" && arrayList.get(0)!=" ") {
+        //if array is empty
+        if (arrayList.get(0)!="" && arrayList.get(0)!=" " ) {
             System.out.println(arrayList.get(0));
             filtered.add(arrayList.get(0));
 
+
+
+
             //main filter
-            for (int i = 0; i < arrayList.size(); i++) {
+            for (int i = 0; i < arrayList.size()-1; i++) {
+
+                if(arrayList.get(i+1)==null){
+
+
+                }
 
                 //loop
                 if (arrayList.get(i).charAt(arrayList.get(i).length() - 1) == arrayList.get(i + 1).charAt(0)) {

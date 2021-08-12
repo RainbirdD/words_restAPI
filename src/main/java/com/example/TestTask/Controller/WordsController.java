@@ -28,8 +28,6 @@ public class WordsController {
 
 
 
-
-
     public Map<String, List> inputMap = new HashMap<>(){{
         put("words", arrayList);
     }};
@@ -46,44 +44,4 @@ public class WordsController {
         filter.filtBy(arrayList);
         return filter.inputMap;
     }
-
-/*
-        //new arr to put in map
-        ArrayList<String> newList = new ArrayList<>();
-
-        //checkout not empty arr
-        if (!arrayList.isEmpty()) {
-            System.out.println(arrayList.get(0));
-            newList.add(arrayList.get(0));
-        } else
-            System.out.println(arrayList);
-
-        //main filter
-        for (int i = 0; i < arrayList.size(); i++) {
-
-            //loop
-            if (arrayList.get(i).charAt(arrayList.get(i).length() - 1) == arrayList.get(i + 1).charAt(0)
-                    &&
-                    arrayList.get(i + 1).charAt(0) == arrayList.get(i).charAt(arrayList.get(i).length() - 1)) {
-
-                newList.add(arrayList.get(i+1));
-
-                System.out.println(arrayList.get(i + 1));
-
-            } else
-                break;
-
-
-        }
-        inputMap.put("words", newList);
-        return inputMap;*/
-
-
-
-
-
-
-
-
-
 }
