@@ -42,7 +42,7 @@ public class WordsController {
         //new arr to put in map
         ArrayList<String> newList = new ArrayList<>();
 
-        //not empty arr
+        //checkout not empty arr
         if (!arrayList.isEmpty()) {
             System.out.println(arrayList.get(0));
             newList.add(arrayList.get(0));
@@ -52,7 +52,7 @@ public class WordsController {
         //main filter
         for (int i = 0; i < arrayList.size(); i++) {
 
-
+            //loop
             if (arrayList.get(i).charAt(arrayList.get(i).length() - 1) == arrayList.get(i + 1).charAt(0)
                     &&
                     arrayList.get(i + 1).charAt(0) == arrayList.get(i).charAt(arrayList.get(i).length() - 1)) {
