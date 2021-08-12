@@ -3,7 +3,6 @@ package com.example.TestTask.Controller;
 
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -12,19 +11,24 @@ import java.util.Map;
 @RestController
 @RequestMapping("words")
 public class WordsController {
-    private int counter;
-
+   static Filter filter = new Filter();
 
     //Input??
     ArrayList<String> arrayList = new ArrayList<>() {{
         add("cat");
         add("tom");
         add("math");
-        add("hawk");
-        add("kill");
+        add("khawk");
+        add("pill");
         add("love");
         add("rules");
     }};
+
+
+
+
+
+
 
     public Map<String, List> inputMap = new HashMap<>(){{
         put("words", arrayList);
@@ -37,8 +41,13 @@ public class WordsController {
 
 
     @GetMapping("filter")
-    public Map<String, List> filter(){
+    public Map<String, List> filtered() {
 
+        filter.filtBy(arrayList);
+        return filter.inputMap;
+    }
+
+/*
         //new arr to put in map
         ArrayList<String> newList = new ArrayList<>();
 
@@ -67,8 +76,8 @@ public class WordsController {
 
         }
         inputMap.put("words", newList);
-        return inputMap;
-    }
+        return inputMap;*/
+
 
 
 
