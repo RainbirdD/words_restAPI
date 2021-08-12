@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class WordsTest2{
+public class Words2Test {
     Filter filter = new Filter();
     Map<String,  ArrayList> actualMap = new HashMap<>();
 

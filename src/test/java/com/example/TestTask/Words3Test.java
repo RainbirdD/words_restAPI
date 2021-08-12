@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class WordsTest4{
+public class Words3Test {
     Filter filter = new Filter();
     Map<String,  ArrayList> actualMap = new HashMap<>();
 
@@ -23,17 +23,20 @@ public class WordsTest4{
 
 
         ArrayList<String> arrayList = new ArrayList<>() {{
-            add("");
+            add("fish");
             add("horse");
-            add("");
+            add(" ");
             add("goose");
             add("eagle");
         }};
 
 
-        ArrayList<String> actual = new ArrayList<>();
+        ArrayList<String> actual = new ArrayList<>() {{
+            add("fish");
+            add("horse");
+        }};
 
-
+        actualMap.put("words", actual);
 
 
         Assert.assertEquals(filter.filtBy(arrayList), actualMap);

@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class WordsTest3{
+public class Words1Test {
     Filter filter = new Filter();
     Map<String,  ArrayList> actualMap = new HashMap<>();
 
@@ -25,7 +25,7 @@ public class WordsTest3{
         ArrayList<String> arrayList = new ArrayList<>() {{
             add("fish");
             add("horse");
-            add(" ");
+            add("egg");
             add("goose");
             add("eagle");
         }};
@@ -34,6 +34,10 @@ public class WordsTest3{
         ArrayList<String> actual = new ArrayList<>() {{
             add("fish");
             add("horse");
+            add("egg");
+            add("goose");
+            add("eagle");
+
         }};
 
         actualMap.put("words", actual);
